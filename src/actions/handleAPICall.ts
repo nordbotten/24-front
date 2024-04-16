@@ -17,6 +17,7 @@ const handleAPICall = async <T = any>(
         "Content-Type": "application/json",
       },
       body: ["POST", "PUT"].includes(method) ? JSON.stringify(data) : undefined,
+      cache: "no-store",
     }
   );
   return response.json();
